@@ -40,7 +40,7 @@ int handle_write_char(char c, char buffer[], int flags, int width,
 			return (write(1, &buffer[0], 1) +
 					write(1, &buffer[BUFF_SIZE - i - 1], width - 1));
 		else
-			return (write(1, &buffer[BUFF_size - i - 1], width - 1) +
+			return (write(1, &buffer[BUFF_SIZE - i - 1], width - 1) +
 					write(1, &buffer[0], 1));
 	}
 	return (write(1, &buffer[0], 1));
@@ -103,7 +103,7 @@ int write_num(int ind, char buffer[], int flags, int width, int prec,
 
 		return (0);
 
-	if (prec == 0 && ind == BUFF_SIZE - 2 && butter[ind] == '0')
+	if (prec == 0 && ind == BUFF_SIZE - 2 && buffer[ind] == '0')
 		buffer[ind] = padd = ' ';
 
 	if (prec > 0 && prec < length)

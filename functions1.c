@@ -68,7 +68,7 @@ int print_octal(va_list types, char buffer[], int flags, int width,
 	if (flags & F_HASH && init_num != 0)
 		buffer[i--] = '0';
 	i++;
-	return (write unsgnd(0, i, buffer, flags, width, precision, size));
+	return (write_unsgnd(0, i, buffer, flags, width, precision, size));
 }
 
 /****** Print unsigned number in hexadecimal ******/

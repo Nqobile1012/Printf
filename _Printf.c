@@ -4,13 +4,17 @@ void print_buffer(char buffer[], int *buff_ind);
 /**
  * _printf - the printf function
  * @format: the format
+ * @width: width
+ * @precision: precision specification
+ * @size: size specifier
+ * @buff_ind: buffer index
  * Return: the printed charaters
  */
 
 int _printf(const char *format, ...)
 {
 	int i, printed = 0, printed_chars = 0;
-	int flags, int width, int precision, int size, buff_ind = 0;
+	int flags, width, precision, size, buff_ind = 0;
 	va_list list;
 	char buffer[BUFF_SIZE];
 
